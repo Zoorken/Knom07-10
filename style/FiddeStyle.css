@@ -16,7 +16,7 @@ background:#e6e6e6;
 overflow-y:scroll;
 }
 body{
- background:#FBCA98;
+ background:#E8E8E8;
  font-family: Georgia, serif; 
  color: #333;
 }
@@ -31,7 +31,7 @@ border:0;
 }
 
 /*----Centrera sidan---*/
-header#top,div#content,nav.navMenu, div#footerText{
+header#top,div#content,nav.navMenu{
 margin: 0 auto;
 width:950px;
 }
@@ -58,8 +58,9 @@ header#top h1{
 }
 /*---NAVIGATION---*/
 nav.navMenu{
- background:#C96666;
  padding: 2px 8px; 
+ width:380px;
+ float:right;
 }
 nav.navMenu a{
  padding: 6px 8px;
@@ -85,16 +86,21 @@ footer.byline{
 
 }
 footer#bottom{
-background:#e6e6e6;
+background:#FDBB1D;
 padding: .2em 0 .2em 0;
+}
+#footerText{
+margin: 0 auto;
+width:940px;
+padding:10px;
 }
 
 
 /*---Links-style---*/
-a { color: #FB9866; outline:0;}
+a { color: #666; outline:0;}
 a:link{text-decoration: none;}
 a:visited {}
-a:hover { text-decoration:underline; color: #5C0A0A;}
+a:hover { text-decoration:underline; color: #697BA2;}
 a:active{}
 
 /*--know what tab that is in use-- */
@@ -108,12 +114,22 @@ color:green;
 .right {float:right;}
 .left {float:left;}
 
-div#content { overflow:auto;}
+div#content { 
+overflow:auto;
+background:#FFF;
+box-shadow: 0 0 5px rgba(0,0,0,0.2);
+padding-bottom:40px;
+}
+.containerWrapper{
+margin:0 auto;
+width:960px;
+}
+.justifyBorder{
+padding:10px;
+}
 
 /*---Snygga till bilder---*/
 figure {
- border:5px solid #E6E6E6;
- border-radius: 10px 10px 0 0;
  padding:4px;margin:1em;
  }
 figcaption {

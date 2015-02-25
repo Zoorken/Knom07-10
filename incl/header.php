@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style/FiddeStyle.css" title="Styling">
 	<link rel="alternate stylesheet" href="style/debug.css" title="Debug style">
 	<link rel="alternate stylesheet" href="style/style.css">
-	<link rel="shortcut icon" href="img/icon.png">
+	<link rel="shortcut icon" href="img/ankh.ico">
 	
 	<!--Each page can set $pageStyle to create a private stylesheet -->
 	<?php if(isset($pageStyle)):?>
@@ -20,24 +20,21 @@
 	<!--Above header -->
 	<header id="above">
 		<?php echo userLoginMenu(); ?>
-		<nav class="related">
-			<a href="../kmom01/me.php">kmom01</a>
-			<a href="../kmom02/me.php">kmom02</a>
-			kmom03
-		</nav>
 	</header>
 	<!-- Header -->
-	<header id="top">
-		<div class="left">
-			<img src="img/logo.png" alt="htmlphp logo" width=98 height=90 style="padding-right: 5px;">
-		</div>
-		<h1>Ducky Duckstar</h1>
-	</header>
-	
-	<!-- Navigeringsmenu -->
-	<nav class="navMenu">
-		<a id="me-"     href="me.php">Me</a>
-		<a id="report-" href="report.php">Redovisning</a>
-		<a id="test-" href="test.php">Tester</a>
-		<a id="source-" href="viewsource.php">Källkod</a>
-	</nav>
+	<div class="containerWrapper">
+		<header id="top">
+			<div class="left">
+				<img src="img/logo.png" alt="htmlphp logo" width=98 height=90 style="padding-right: 5px;">
+			</div>
+			<h1>Ducky Duckstar</h1>
+		</header>
+		
+		<!-- Navigeringsmenu -->
+		<nav class="navMenu">
+			<a id="index-"     href="index.php">Hem</a>
+			<a id="article-" href="article.php">Artiklar</a>
+			<a id="object-" href="#">Objekt</a>
+			<a id="about-" href="about.php">Om BMO</a>
+			<a id="source-" href="viewsource.php">Källkod</a>
+		</nav>
