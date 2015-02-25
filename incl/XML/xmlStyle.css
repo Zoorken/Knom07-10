@@ -1,0 +1,17 @@
+CATALOG{
+background-color:#fff;
+width:100%;
+}
+MOVIE{
+display:block;
+margin-bottom:10pt;
+margin-left:0;
+}
+TITLE{
+color:#0000FF;
+font-size:20pt;
+}
+YEAR, LENGHT{
+margin-left:20pt;
+display:block;
+}

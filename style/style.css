@@ -1,0 +1,99 @@
+/* general
+-------------------------------------------------------- 
+
+*/
+html {background: #cc6666;}
+
+body { 
+	margin: 8px auto;
+	width: 934px;
+	padding: 8px;
+	background: #ffffcc;
+	border: 1px dashed #660033;
+	font-family: Georgia, serif; 
+	color: #333333; 
+}
+
+h1 {
+	text-transform: uppercase;
+	border-bottom: 4px double #333333;
+}
+
+/* the header with navigation to knom */
+header#above{
+	font-family:arial,helvetica,sans-serif;
+	border-bottom:1px solid #E6E6E6;
+	margin-bottom:4px;
+	color:#000;
+}
+
+/* header
+-------------------------------------------------------- 
+
+*/
+div#top {}
+
+
+/* navigation menu
+-------------------------------------------------------- 
+
+*/
+nav.navMenu {
+    display: block;
+    padding: 0.2em 1em 0 1em;
+    background: #ffcc99;
+    border-bottom: 2px solid #999999;
+}
+nav.navMenu a {
+    padding: 0.3em 1em 0 1em;
+    color: #555555;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-decoration:none;
+}
+nav.navMenu a:link    { }
+nav.navMenu a:visited { }
+nav.navMenu a:hover   { color: #111111; background: #999999; }
+nav.navMenu a:active  { }
+
+
+/* footer
+-------------------------------------------------------- 
+
+*/
+div#footer a {
+	font: italic 0.8em Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color: #999999;
+}
+div#footer a:link    { }
+div#footer a:visited { }
+div#footer a:hover   { text-decoration:underline;  color: #333333; }
+div#footer a:active  { }
+
+
+/* nice to have stuff
+-------------------------------------------------------- 
+
+*/
+.right{
+	float:right;
+}
+figure{
+	border:4px solid #E6E6E6;
+	margin:1em;
+	text-align:center;
+}
+figure figcaption{
+	background:#E6E6E6;
+	border:2px solid #E6E6E6;
+}
+figure.top{
+ margin-top:0;
+}
+
+/* html5 elements
+--------------------------------------------------------
+*/
+header,footer,nav,article,section,aside,figure,figcaption{
+display:block;
+}

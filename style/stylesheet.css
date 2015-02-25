@@ -1,0 +1,75 @@
+/* general
+-------------------------------------------------------- 
+
+*/
+html {background: #cc6666;}
+
+body { 
+	margin: 8px auto;
+	width: 934px;
+	padding: 8px;
+	background: #ffffcc;
+	border: 1px dashed #660033;
+	font-family: Georgia, serif; 
+	color: #333333; 
+}
+
+h1 {
+	text-transform: uppercase;
+	border-bottom: 4px double #333333;
+}
+
+
+/* header
+-------------------------------------------------------- 
+
+*/
+div#top {}
+
+
+/* navigation menu
+-------------------------------------------------------- 
+
+*/
+nav.navmenu {
+    display: block;
+    padding: 0.2em 1em 0 1em;
+    background: #ffcc99;
+    border-bottom: 2px solid #999999;
+}
+nav.navmenu a {
+    padding: 0.3em 1em 0 1em;
+    color: #555555;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-decoration:none;
+}
+nav.navmenu a:link    { }
+nav.navmenu a:visited { }
+nav.navmenu a:hover   { color: #111111; background: #999999; }
+nav.navmenu a:active  { }
+
+
+/* footer
+-------------------------------------------------------- 
+
+*/
+div#footer a {
+	font: italic 0.8em Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color: #999999;
+}
+div#footer a:link    { }
+div#footer a:visited { }
+div#footer a:hover   { text-decoration:underline;  color: #333333; }
+div#footer a:active  { }
+
+
+/* nice to have stuff
+-------------------------------------------------------- 
+
+*/
+.right {
+float:right;
+width:400px;
+height:300px;
+}
