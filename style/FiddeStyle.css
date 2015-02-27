@@ -7,6 +7,13 @@
 /* general
 -------------------------------------------------------- 
 */
+
+*{
+font-family:proxima-nova-soft,sans-serif;
+font-size:16px;
+color:#333;
+line-height:1.6em
+}
 html,body{
  margin:0;
  padding:0;
@@ -14,21 +21,28 @@ html,body{
 html{
 background:#e6e6e6;
 overflow-y:scroll;
+
 }
 body{
- background:#E8E8E8;
- font-family: Georgia, serif; 
- color: #333;
+background:#E8E8E8;
+}
+h1,h2{
+color:#FDB813;
 }
 h1{
 text-transform: uppercase;
+font-size:33px;
 }
-h1,h2{
- border-bottom: 1px solid #ddd;
+h2{
+font-size:24px;
+border-bottom: 1px solid #ddd;
+text-transform: uppercase;
 }
 img{
 border:0;
 }
+
+
 
 /*----Centrera sidan---*/
 header#top,div#content,nav.navMenu{
@@ -44,6 +58,21 @@ header#above{
 border-bottom:1px solid #E6E6E6;
 margin-bottom:2px;
 padding-left:5px;
+background:-moz-linear-gradient(right center , #d0d1d1 0%, #e6e6e6 69%) repeat scroll 0 0 #d0d1d1;
+color:#393939;
+height:30px;
+}
+#topMenu{
+background:url('img/diWhite.png') repeat scroll 0 0 transparent;
+height:30px;
+
+}
+nav.related{
+margin:0 auto;
+width:950px;
+}
+nav.related, nav.login{
+padding-top:5px;
 }
 nav.login{
 float:right;
@@ -167,7 +196,7 @@ overflow:auto;
 /*---Vänstermenyn---*/
 nav.lmenu ul, nav.lmenu ul ul{
 list-style:outside none;
-margin:0;
+margin:5px;
 padding:0;
 }
 ul#kmom02_pageStyle     li#pagestyle >a,

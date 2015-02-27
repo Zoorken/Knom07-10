@@ -20,16 +20,21 @@
 	<!--Above header -->
 	<header id="above">
 		<?php echo userLoginMenu(); ?>
+		<div id="topMenu">
+			<nav class="related">
+				<a href="#"><span style="color:#114069">DBWEBB</span> <span style="color:#369449">PROJECT</span></a>
+			</nav>
+		</div>
 	</header>
 	<!-- Header -->
 	<div class="containerWrapper">
 		<header id="top">
 			<div class="left">
-				<img src="img/logo.png" alt="htmlphp logo" width=98 height=90 style="padding-right: 5px;">
+				<img src="img/logo.png" alt="htmlphp logo" style="padding-right: 5px;">
 			</div>
-			<h1>Ducky Duckstar</h1>
+			<h1>BEGRAVNINGSMUSEUM ONLINE</h1>
 		</header>
-		
+
 		<!-- Navigeringsmenu -->
 		<nav class="navMenu">
 			<a id="index-"     href="index.php">Hem</a>

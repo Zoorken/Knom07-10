@@ -1,5 +1,6 @@
 <!-- Footer -->
 </div><!--containerWrapper-->
+
   <footer id="bottom">
    <div id="footerText">
 	<p>Verktyg: 

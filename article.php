@@ -55,6 +55,7 @@
 ?>	
 	
 <?php include("incl/header.php"); ?>
+
 <div id="content">
 	<aside class="left" style="width:22%;">
 		<?php include("$path/aside.php");?>
