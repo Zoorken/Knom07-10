@@ -12,7 +12,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $current = null;
 
 $select ="<select id='input1' name='article' onchange='form.submit();'>";
-$select .= "<option value='-1'>Välj Artikel</option>";
+$select .= "<option value='-1'>VÃ¤lj Artikel</option>";
 
 foreach($res as $article){
 	$selected="";
@@ -28,7 +28,7 @@ $select .= "</select>";
 <form method="post">
 	<fieldset>
 		<p>
-			<label for="input1">Artikel:</label><br>
+			<label for="input1">Artikel.:</label><br>
 			<?php echo $select;?>
 		</p>
 		
