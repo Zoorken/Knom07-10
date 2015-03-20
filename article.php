@@ -1,6 +1,9 @@
 <?php 
 	include("incl/config.php"); 
 	$pageId = "BMO-Artiklar";
+	
+//Path to the SQLite database file
+	$dbPath = dirname(__FILE__) . "/incl/article/data/bmo.sqlite";
 
 //checking the url for a query string	
 	$p=null;
@@ -16,9 +19,9 @@
 		$title ="BMO-enskild artikel";
 		$file = "showArticle.php";
 	}
-	elseif($p == "kmom03_getform"){
-		$title ="Tester kmom03: visa formulär";
-		$file = "kmom03_getform.php";
+	elseif($p == "read-all"){
+		$title ="BMO-alla artiklar";
+		$file = "showAllArticle.php";
 	}
 	else{
 		$title = "Artiklar";
@@ -29,10 +32,10 @@
 <?php include("incl/header.php"); ?>
 <div id="content">
 	<div class="justify">
-		<aside class="left" style="width:22%;">
+		<aside class="left">
 			<?php include("$path/aside.php");?>
 		</aside>
-		<article class="right border" style="width:72%;">
+		<article class="right border" style="width:85%;">
 			<?php include("$path/$file");?>
 		</article>
 	</div>

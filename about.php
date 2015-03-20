@@ -1,13 +1,18 @@
-<?php include("incl/config.php");
-	$title = "Report";
-	$pageId = "report";
- include("incl/header.php"); ?>
+<?php 
+	include("incl/config.php"); 
+	$pageId = "BMO-om";
+	$title = "Om-BMO";
+	
+//Path to the SQLite database file
+	$dbPath = dirname(__FILE__) . "/incl/article/data/bmo.sqlite";
+?>
 
-	<!-- body -->
-	<div id="content">
+<?php include("incl/header.php"); ?>
+<div id="content">
+	<div class="justify">
 		<article>
-		
+			<?php include("incl/article/aboutContent.php");?>
 		</article>
-	</div>	
-<?php include("incl/footer.php"); ?>
-
+	</div>
+</div>
+<?php include("incl/footer.php");

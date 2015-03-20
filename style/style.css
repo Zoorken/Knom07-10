@@ -55,7 +55,13 @@ nav.navMenu a:visited { }
 nav.navMenu a:hover   { color: #111111; background: #999999; }
 nav.navMenu a:active  { }
 
+/* left menu
+-------------------------------------------------------- 
 
+*/
+aside{
+width:15%;
+}
 /* footer
 -------------------------------------------------------- 
 
@@ -97,3 +103,4 @@ figure.top{
 header,footer,nav,article,section,aside,figure,figcaption{
 display:block;
 }
+

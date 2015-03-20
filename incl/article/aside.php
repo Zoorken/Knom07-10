@@ -3,7 +3,7 @@
 	   <li><h4>Välj artikel</h4>
 	      <ul>
 				<li id="article-read-"><a href="?p=showArticle">Read</a>
-				<li id="blokket-readAll-"><a href="?p=read-all">Read all</a>
+				<li id="article-readAll-"><a href="?p=read-all">Read all</a>
 		   </ul>
 	</ul>
 </nav>
