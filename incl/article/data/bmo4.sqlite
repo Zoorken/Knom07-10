@@ -1,0 +1,10 @@
+CREATE TABLE "Article" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE , "category" TEXT, "title" TEXT, "content" TEXT, "author" TEXT, "pubdate" DATETIME NOT NULL  DEFAULT CURRENT_DATE);
+CREATE TABLE Object
+		(
+			id INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
+			title TEXT, 
+			category TEXT, 
+			text TEXT,
+			image TEXT,
+			owner TEXT
+		, "articleLink" TEXT);

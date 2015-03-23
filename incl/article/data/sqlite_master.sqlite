@@ -1,0 +1,13 @@
+INSERT INTO "sqlite_master" VALUES('table','Object','Object',2,'CREATE TABLE Object
+		(
+			id INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
+			title TEXT, 
+			category TEXT, 
+			text TEXT,
+			image TEXT,
+			owner TEXT
+		, "articleLink" TEXT)');
+INSERT INTO "sqlite_master" VALUES('index','sqlite_autoindex_Object_1','Object',4,NULL);
+INSERT INTO "sqlite_master" VALUES('table','Article','Article',11,'CREATE TABLE "Article" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE , "category" TEXT, "title" TEXT, "content" TEXT, "author" TEXT, "pubdate" DATETIME NOT NULL  DEFAULT CURRENT_DATE)');
+INSERT INTO "sqlite_master" VALUES('index','sqlite_autoindex_Article_1','Article',12,NULL);
+INSERT INTO "sqlite_master" VALUES('table','sqlite_sequence','sqlite_sequence',13,'CREATE TABLE sqlite_sequence(name,seq)');
