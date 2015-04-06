@@ -1,6 +1,6 @@
 <?php 
 	include("incl/config.php"); 
-	$pageId = "BMO-om";
+	$pageId = "about";
 	$title = "Om-BMO";
 	
 //Path to the SQLite database file
@@ -10,7 +10,7 @@
 <?php include("incl/header.php"); ?>
 <div id="content">
 	<div class="justify">
-		<article>
+		<article class="justifyBorder">
 			<?php include("incl/article/aboutContent.php");?>
 		</article>
 	</div>

@@ -32,6 +32,7 @@ else
 <?php include ("incl/header.php");?>
 <div id="content">
 	<div class="left border" style="width:80%;">
+	<article class="justifyBorder">
  <?php if(isset($content)):
       echo $content;
     else: ?> 
@@ -46,6 +47,7 @@ else
         <p><a href="?p=login">Vill du logga in</a>?</p>
       <?php endif; ?>  
     <?php endif; ?>
+	 		</article>
 	 </div>
 </div>
 

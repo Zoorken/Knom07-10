@@ -47,7 +47,7 @@ border:0;
 /*----Centrera sidan---*/
 header#top,div#content,nav.navMenu{
 margin: 0 auto;
-width:950px;
+width:1200px;
 }
 /*---Fixa avstånden lite snyggt för main content ---*/
 div#content{
@@ -133,12 +133,19 @@ a:hover { text-decoration:underline; color: #697BA2;}
 a:active{}
 
 /*--know what tab that is in use-- */
-body#me a#me-,
-body#report a#report-,
+body#index a#index-,
+body#article a#article-,
+body#about a#about-,
 body#source a#source-,
 body#test a#test-{
 color:green;
 }
+/*--Know what undersite that is in use--*/
+ul#showArticle li#article-read->a,
+ul#read-all li#article-readAll->a{
+color:green;
+}
+
 /*---rätta till stuffgrejer ---*/
 .right {float:right;}
 .left {float:left;}
@@ -212,4 +219,24 @@ color:green;
 }
 
 
+/*Article style */
+article.rightContent{
+overflow:auto;
+float:right;
+}
+section#textContent{
+float:left;
+width:95%;
+overflow:auto;
+}
+#imageContent{
 
+}
+article.maggyLeft{
+float:left;
+width:69%;
+}
+aside.maggyRight{
+float:left;
+width: 27%;
+}

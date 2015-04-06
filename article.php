@@ -1,6 +1,6 @@
 <?php 
 	include("incl/config.php"); 
-	$pageId = "BMO-Artiklar";
+	$pageId = "article";
 	
 //Path to the SQLite database file
 	$dbPath = dirname(__FILE__) . "/incl/article/data/bmo.sqlite";
@@ -35,7 +35,7 @@
 		<aside class="left">
 			<?php include("$path/aside.php");?>
 		</aside>
-		<article class="right border" style="width:85%;">
+		<article class="rightContent" style="width:85%;">
 			<?php include("$path/$file");?>
 		</article>
 	</div>

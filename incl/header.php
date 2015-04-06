@@ -41,5 +41,4 @@
 			<a id="article-" href="article.php">Artiklar</a>
 			<a id="object-" href="#">Objekt</a>
 			<a id="about-" href="about.php">Om BMO</a>
-			<a id="source-" href="viewsource.php">Källkod</a>
 		</nav>

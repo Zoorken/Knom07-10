@@ -26,15 +26,18 @@ if(isset($_GET["a"])){
 	$a = $_GET["a"];
 }
 ?>
-	<!--Bör flyttas till sidobaren-->
-	<fieldset>
+	<!--Listar artiklarna-->
+	<?php if($a==null):?>
+		<h2>Artiklar</h2>
+		<p>Välkommen till min artikelsida. Här nedan kan du välja en artikel att läsa.</p>
 		<ul>
 		<?php foreach($res as $article): ?>
 			<li><a href="<?php echo $currentArticle="?p=showArticle&a=" . $article['title']; ?>"><?php echo $article['title']; ?></a>
 		<?php endforeach; ?>
 		</ul>
-	</fieldset>
+	<?php endif;?>
 	
+
 	<!--Plockar fram artikeln som användaren valt -->
 	<?php if(isset($a)){
 		foreach($res as $article){
@@ -42,8 +45,6 @@ if(isset($_GET["a"])){
 				$current = $article;
 				//break;
 			}
-			$idArray[$i] = array($article['id']);
-			$i++;
 		}
 	}
 	?>
@@ -61,14 +62,27 @@ if(isset($_GET["a"])){
 	$oRes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	?>
 	
-	<fieldset>
-		<p>
-			<div style="background:#eee; border:1px solid #eee;padding:1em;overflow:auto;">
-				<h1><?php echo $current['title']; ?></h1>
-				<p class="by-author"><?php echo $current['author'] . ', publicerad ' . $current['pubdate']; ?></p>
-				<p><?php echo $current['content']; ?></p>
-				
-				<p>
+	
+	
+		<section id="textContent">
+			<h1><?php echo $current['title']; ?></h1>
+			<p class="by-author"><?php echo $current['author'] . ', publicerad ' . $current['pubdate']; ?></p>
+			<p><?php echo $current['content']; ?></p>
+			
+			<?php 
+				//Block out About page
+				$nextarticle=1;
+				//Add current article number to blocked out, this show next article.
+				$nextarticle=$current['id'] +1;
+				if($nextarticle['id']<3){
+					$prevArticle=$current['id']-1;
+				}
+			?>
+		
+		
+		</section>
+		
+		<div id="imageContent">
 				<?php foreach($oRes as $images):?>
 					<!--Change search route-->
 					<!--Also makes image clickable for full size-->
@@ -78,36 +92,18 @@ if(isset($_GET["a"])){
 						$newPathImage['image'] = str_replace("bmo", $resizeImage, $images['image']);
 					?>
 				<a href="<?php echo $images['image']?>"><img src="<?php echo $newPathImage['image']; ?>"></a>
-				
-				
 				<?php endforeach; ?>
-				</p>
-				
-				 <?php
-					// $nextarticle = $current['id'] + 1;
-					
-					// for($i=0; i<count($idArray); $i++;){
-						// if($nextarticle == $value){
-							// echo $nextarticle;
-						// }
-					
-					// }
-					
-					// foreach ($idArray as $value) {
-						// if($nextarticle == $value){
-							// echo $nextarticle;
-						// }
-						// else{
-							// $nextarticle++;
-						// }
-					// }
-					//echo $nextarticle = $current['id'] + 1;
-					//print_r($idArray);
-			
-				// ?>
-				
-			</div>
-		</p>
-	</fieldset>
-	
+		</div>
+		
+		<!--Navigation to next and prev article -->
+				<?php foreach($res as $article): ?>
+					<?php if($prevArticle == $article['id']):?>
+						<!--<?php echo $article['title']; ?>-->
+						<a href="<?php echo $currentArticle="?p=showArticle&a=" . $article['title']; ?>">Föregående artikel - (<?php echo $article['title']; ?>)</a><br>
+					<?php endif;?>
+					<?php if($nextarticle == $article['id']):?>
+						<a href="<?php echo $currentArticle="?p=showArticle&a=" . $article['title']; ?>"> Nästa artikel - (<?php echo $article['title']; ?>)</a>
+					<?php endif;?>
+				<?php endforeach; ?>
+		
 	<?php endif;?>
