@@ -39,6 +39,6 @@
 		<nav class="navMenu">
 			<a id="index-"     href="index.php">Hem</a>
 			<a id="article-" href="article.php">Artiklar</a>
-			<a id="object-" href="#">Objekt</a>
+			<a id="object-" href="object.php">Objekt</a>
 			<a id="about-" href="about.php">Om BMO</a>
 		</nav>

@@ -29,6 +29,27 @@ function getCurrentUrl() {
 }
 
 
+//
+// Function to create figure, img and figcaption elements around an image.
+//
+function figure($src, $size=null, $caption=null, $alt=null, $class=null) {
+  $srcOrig=$src;
+  if(isset($size)) {
+    $src = dirname($src) . '/' . $size . '/'. basename($src); 
+  }
+  $alt = isset($alt) ? "alt='[Bild] $alt'" : null;
+  $class = isset($class) ? "class='$class'" : null;
+  return <<<EOD
+<figure id="$src" {$class}>
+  <a href="{$srcOrig}"><img style="max-height:100%;max-width:100%;" src="{$src}" {$alt}></a>
+  <figcaption>
+    <p><a href="#$src" title="Direktlänk till denna bild">Bild</a>: $caption</p>
+  </figcaption>
+</figure>  
+EOD;
+}
+
+
 
 // -------------------------------------------------------------------------------------------
 //
