@@ -23,6 +23,10 @@
 		$title ="BMO-alla artiklar";
 		$file = "showAllArticle.php";
 	}
+	elseif($p == "searchArticle"){
+		$title = "BMO-search";
+		$file = "searchArticle.php";
+	}
 	else{
 		$title = "Artiklar";
 		$file = "default.php";

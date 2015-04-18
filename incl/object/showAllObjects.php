@@ -23,7 +23,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 						$resizeImage ="bmo/80";
 						$newPathImage['image'] = str_replace("bmo", $resizeImage, $images['image']);
 					?>
-					<a href="<?php echo $images['image']?>"><img src="<?php echo $newPathImage['image']; ?>"></a>
+					<a href="<?php echo $images['image']?>"><img src="<?php echo $newPathImage['image']; ?>" alt="<?php echo $images['id']?>"></a>
      <!--   <p><?php echo figure($object['image'], 80, $object['text']); ?></p>-->
        <!--<p>Ägare: <?php echo $object['owner']; ?></p>-->
 	<?php endforeach;?>

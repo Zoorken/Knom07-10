@@ -4,6 +4,7 @@
 	      <ul>
 				<li id="article-read-"><a href="?p=showArticle">Read</a>
 				<li id="article-readAll-"><a href="?p=read-all">Read all</a>
+				<li id="article-search-"><a href="?p=searchArticle">Sök Artikel</a>
 		   </ul>
 	</ul>
 </nav>

@@ -27,6 +27,10 @@
 		$title = "BMO-Gallery";
 		$file = "gallery.php";
 	}
+	elseif($p == "searchObj"){
+		$title = "BMO-search";
+		$file = "searchObject.php";
+	}
 	else{
 		$title = "Objekt";
 		$file = "default.php";
