@@ -32,16 +32,12 @@ if($s != null){
 </form>
 
 <?php if($s != null):?>
-	<fieldset>
 		<?php foreach($res as $ad):?>
 			<?php $counter = 1; ?>
-			<div style="background:#eee; border:1px solid #eee;padding:1em;overflow:auto;">
 				<h1><?php echo $ad['title']; ?></h1>
 				<p class="by-author"><?php echo $ad['author'] . ', publicerad ' . $ad['pubdate']; ?></p>
 				<p><?php echo $ad['content']; ?></p>
-			</div>
 		<?php endforeach;?>
-	</fieldset>
 <?php endif;?>
 
 <?php if($counter == 0){

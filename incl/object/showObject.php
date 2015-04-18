@@ -27,22 +27,22 @@ $select .= "</select>";
 <h2>Objekt som lista</h2>
 
 <form method="post">
-  <fieldset>
-    <p>
-      <label for="input1">Objekt:</label><br>
-      <?php echo $select; ?>
-    </p>
+   <fieldset>
+		<p>
+			<label for="input1">Objekt:</label><br>
+			<?php echo $select; ?>
+		</p>
+		 
+		<?php if(isset($current)): ?>
+		<p>
+			<div style="background:#eee; border:1px solid #eee;padding:1em;">
+			  <h2><?php echo $current['title']; ?></h2>
+			  <p>Kategori: <?php echo $current['category']; ?></p>
+			  <p><?php echo figure($current['image'], 550, $current['text']); ?></p>
+			  <p>Ägare: <?php echo $current['owner']; ?></p>
+			</div>
+		</p>
+		<?php endif; ?>
     
-  <?php if(isset($current)): ?>
-    <p>
-      <div style="background:#eee; border:1px solid #eee;padding:1em;">
-        <h2><?php echo $current['title']; ?></h2>
-        <p>Kategori: <?php echo $current['category']; ?></p>
-        <p><?php echo figure($current['image'], 550, $current['text']); ?></p>
-        <p>Ägare: <?php echo $current['owner']; ?></p>
-      </div>
-    </p>
-  <?php endif; ?>
-    
-  </fieldset>
+   </fieldset>
 </form> 
