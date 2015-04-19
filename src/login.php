@@ -39,6 +39,7 @@ function userLoginMenu() {
     "login"   => "login.php?p=login",
     "status"   => "login.php",
     "logout"   => "login.php?p=logout",  
+	 "admin" => "admin.php",
   );
 
   // check if user is logged in or not, alter the menu depending on the result
@@ -46,7 +47,8 @@ function userLoginMenu() {
     unset($menu['login']);
   } else {
     unset($menu['status']);
-    unset($menu['logout']);      
+    unset($menu['logout']); 
+	 unset($menu['admin']);
   }
   
   $html = "<nav class='login'>";

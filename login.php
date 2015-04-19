@@ -22,7 +22,6 @@ else if ($p == "logout")
   $title = "Logga ut";
   $content = userLogout();
 } 
-else
 {
   $title = "Status login / logout";
 }
