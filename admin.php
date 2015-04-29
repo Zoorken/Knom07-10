@@ -42,6 +42,11 @@ if(userIsAuthenticated()){
 		$title = "BMO-upload Objekt";
 		$file = "uploadObj.php";
 	}
+	elseif($p == "frontArticle"){
+		$title = "BMO-Framsida";
+		$file = "frontArticle.php";
+	
+	}
 	
 	else{
 		$title = "Artiklar";

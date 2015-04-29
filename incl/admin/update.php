@@ -7,7 +7,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 //
 //Check if Save-button was pressed, save if its true.
 if(isset($_POST['doSave'])){
-	$strip = "<b><i><p><img>";
+	$strip = "<b><i><p><img><div><article><aside><?php><figure><figcaption><fieldset>";
 
 	//Add all entries to an array
 	$ad[] = strip_tags($_POST["category"], $strip);

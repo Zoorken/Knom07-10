@@ -15,7 +15,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		<div style="background:#eee; border:1px solid #eee;padding:1em;overflow:auto;">
 			<h1><?php echo $ad['title']; ?></h1>
 			<p class="by-author"><?php echo $ad['author'] . ', publicerad ' . $ad['pubdate']; ?></p>
-			<p><?php echo $ad['content']; ?></p>
+			<?php echo $ad['content']; ?>
 		</div>
 	<?php endforeach;?>
 </fieldset>

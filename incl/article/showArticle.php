@@ -67,7 +67,7 @@ if(isset($_GET["a"])){
 		<section id="textContent">
 			<h1><?php echo $current['title']; ?></h1>
 			<p class="by-author"><?php echo $current['author'] . ', publicerad ' . $current['pubdate']; ?></p>
-			<p><?php echo $current['content']; ?></p>
+			<?php echo $current['content']; ?>
 			
 			<?php 
 				//Block out About page
@@ -91,7 +91,7 @@ if(isset($_GET["a"])){
 						$resizeImage ="bmo/250";
 						$newPathImage['image'] = str_replace("bmo", $resizeImage, $images['image']);
 					?>
-				<a href="<?php echo $images['image']?>"><img src="<?php echo $newPathImage['image']; ?>"></a>
+				<a href="<?php echo $images['image']?>"><img src="<?php echo $newPathImage['image']; ?>" alt="Bild"></a>
 				<?php endforeach; ?>
 		</div>
 		
@@ -99,10 +99,10 @@ if(isset($_GET["a"])){
 				<?php foreach($res as $article): ?>
 					<?php if($prevArticle == $article['id']):?>
 						<!--<?php echo $article['title']; ?>-->
-						<a href="<?php echo $currentArticle="?p=showArticle&a=" . $article['title']; ?>">Föregående artikel - (<?php echo $article['title']; ?>)</a><br>
+						<a href="<?php echo $currentArticle="?p=showArticle&amp;a=" . $article['title']; ?>">Föregående artikel - (<?php echo $article['title']; ?>)</a><br>
 					<?php endif;?>
 					<?php if($nextarticle == $article['id']):?>
-						<a href="<?php echo $currentArticle="?p=showArticle&a=" . $article['title']; ?>"> Nästa artikel - (<?php echo $article['title']; ?>)</a>
+						<a href="<?php echo $currentArticle="?p=showArticle&amp;a=" . $article['title']; ?>"> Nästa artikel - (<?php echo $article['title']; ?>)</a>
 					<?php endif;?>
 				<?php endforeach; ?>
 		

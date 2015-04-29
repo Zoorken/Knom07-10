@@ -142,11 +142,19 @@ color:green;
 /*--Know what undersite that is in use--*/
 ul#showArticle li#article-read->a,
 ul#read-all li#article-readAll->a,
-ul#searchArticle #article-search->a,
-ul#showObject #object-list->a,
-ul#showAllObject #object-gallery->a,
-ul#showGallery #object-gallery2->a,
-ul#searchObj #searchObj->a{
+ul#searchArticle li#article-search->a,
+ul#showObject li#object-list->a,
+ul#showAllObject li#object-gallery->a,
+ul#showGallery li#object-gallery2->a,
+ul#searchObj li#searchObj->a,
+ul#update li#bmo-update->a,
+ul#create li#bmo-create->a,
+ul#delete li#bmo-delete->a,
+ul#updateObj li#bmo-update-obj->a,
+ul#createObj li#bmo-create-obj->a,
+ul#removeObj li#bmo-delete-obj->a,
+ul#uploadObj li#bmo-upload-obj->a,
+ul#frontArticle li#bmo-front->a{
 color:green;
 }
 

@@ -18,6 +18,7 @@
 //
 // Get current url
 //
+
 function getCurrentUrl() {
   $url = "http";
   $url .= (@$_SERVER["HTTPS"] == "on") ? 's' : '';
@@ -71,5 +72,39 @@ function destroySession() {
   
   // Finally, destroy the session.
   session_destroy();
+}
+
+function readDirectory($aPath) {
+  $list = Array();
+  if(is_dir($aPath)) {
+    if ($dh = opendir($aPath)) {
+      while (($file = readdir($dh)) !== false) {
+        if(is_file("$aPath/$file") && $file != '.htaccess') {
+          $list[$file] = "$file";
+        }
+      }
+      closedir($dh);
+    }
+  }
+  sort($list, SORT_STRING);
+  return $list;
+}
+
+function getFileContents($aFilename){
+//Talar om ifall filen går att läsa och existerar. Returnerar en bool.
+	if(is_readable($aFilename)){
+		return file_get_contents($aFilename);
+	} else{
+		return "Fanns verkligen filen?";
+	}
+}
+
+function saveFile($aFileName,$aContent){
+	if(is_writable($aFileName)){
+		file_put_contents($aFileName,$aContent);
+		return "Filen är sparad.";
+	} else{
+		return "Filen är ej skrivbar och kunde ej sparas.";
+	}
 }
 ?>

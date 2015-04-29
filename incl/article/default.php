@@ -31,6 +31,6 @@ if(isset($_GET["a"])){
 	<!--Listar artiklarna-->
 		<ul>
 		<?php foreach($res as $article): ?>
-			<li><a href="<?php echo $currentArticle="?p=showArticle&a=" . $article['title']; ?>"><?php echo $article['title']; ?></a>
+			<li><a href="<?php echo $currentArticle="?p=showArticle&amp;a=" . $article['title']; ?>"><?php echo $article['title']; ?></a>
 		<?php endforeach; ?>
 		</ul>
